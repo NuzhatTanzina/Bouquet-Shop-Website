@@ -1,0 +1,94 @@
+<?php include "Check.php";?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in </title>
+</head>
+<body>
+    <form action="Check.php" method="POST">
+        Username: <br>
+        <input type="text" name="username"><br> 
+        <?php  echo $user;?>
+        password: 
+                <input type="password " name="pass"><br> 
+            
+                <input type="submit" value="submit">
+                <?php echo $pass; ?>
+    </form>
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+------------------------------------
+
+<?php 
+
+  $user="";
+  $pass="";
+  $dept ="";
+  if($_SERVER["REQUEST_METHOD"]=="POST"){
+     $user=$_REQUEST["username"];
+   // $pass=$_REQUEST["password"];
+    //$dept=$_REQUEST["dept"];
+
+
+
+     if(empty($_REQUEST["username"])){
+         $user="please enter your name";
+         
+     }
+     else
+        $username=$_REQUEST["username"];
+  }
+ if(isset($_REQUEST["pass"])){
+     $pass="please enter your valid pass";
+
+ }
+ else {
+     $pass=$_REQUEST["pass"];
+ }
+?>
+-------------------------------------
+<?php include "Check.php";?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="Check.php" method="POST">
+        Department:  <br>
+
+       <select name="dept" id=""> <?php echo $dept; ?>
+           <option value="BBA" name="BBA">BBA</option>
+           <option value="CSE" name="CSE">CSE</option>
+           <option value="EEE" name="EEE">EEE</option>
+
+
+       </select>
+
+       <?php echo $dept;?>
+       <br>
+       <input type="submit">
+
+
+    </form>
+    
+</body>
+</html>
+
+

@@ -1,0 +1,13 @@
+<<Capacity&planning>>
+* Efficiency= Actual output/Effective capacity   [%]
+*Utilization=Actual outpur/Design capacity       [%]
+ 
+Cost 2 types : Fixed , variable 
+ depends on output 
+
+totcost=fixed+variable
+variale cost=no of unit product* variable per unit
+Total revenue=No of unit produced*price per unit
+Profit=Revenue-Cost
+Break even, R=C
+ 
